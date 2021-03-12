@@ -1,0 +1,2748 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>testspec (NT-QA-04) Final Project - Croitoru Dan-Nicolae</title>
+<link type="text/css" rel="stylesheet" href="https://testlink.scoalainformala.ro/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo" height="53" src="https://testlink.scoalainformala.ro/gui/themes/default/images/tl-logo-transparent-25.png" /></div>
+<div class="doc_title"><p>Test Specification</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: (NT-QA-04) Final Project<br>Test Suite: (NT-QA-04) Final Project - Croitoru Dan-Nicolae</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 12/03/2021</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><b><p style="padding-left: 20px;"><a href="#toc_1">1.Croitoru Dan-Nicolae</a></p></b>
+<b><p style="padding-left: 30px;"><a href="#toc_1_1">1.1.Skype for Desktop (version 8.67.0.99)</a></p></b>
+<b><p style="padding-left: 40px;"><a href="#toc_1_1_1">1.1.1.Smoke Testing</a></p></b>
+<p style="padding-left: 75px;"><a href="#toc_tc440880">NT-QA-04-1425: Register using valid credentials</a></p><p style="padding-left: 75px;"><a href="#toc_tc440882">NT-QA-04-1426: Log In using valid credentials</a></p><p style="padding-left: 75px;"><a href="#toc_tc440890">NT-QA-04-1427: Search for an existing Skype User</a></p><p style="padding-left: 75px;"><a href="#toc_tc440894">NT-QA-04-1428: Add to contacts and existing Skype User</a></p><p style="padding-left: 75px;"><a href="#toc_tc440936">NT-QA-04-1440: Add new contact by using &quot;New Contact&quot; button</a></p><p style="padding-left: 75px;"><a href="#toc_tc440955">NT-QA-04-1449: Add new contact by inviting them to Skype</a></p><p style="padding-left: 75px;"><a href="#toc_tc440899">NT-QA-04-1429: Initiate a video call with a Skype contact</a></p><p style="padding-left: 75px;"><a href="#toc_tc440915">NT-QA-04-1434: End a video call with an existing Skype contact</a></p><p style="padding-left: 75px;"><a href="#toc_tc440901">NT-QA-04-1430: Initiate an audio call with a Skype contact</a></p><p style="padding-left: 75px;"><a href="#toc_tc440917">NT-QA-04-1435: End an audio call with an existing Skype contact</a></p><p style="padding-left: 75px;"><a href="#toc_tc440968">NT-QA-04-1452: Disable the microphone in a call by using the &quot;Mute&quot; button</a></p><p style="padding-left: 75px;"><a href="#toc_tc440972">NT-QA-04-1454: Enable the microphone in a call by using the &quot;Unmute&quot; button</a></p><p style="padding-left: 75px;"><a href="#toc_tc440905">NT-QA-04-1432: Initiate conversation with a Skype contact by using instant messages</a></p><p style="padding-left: 75px;"><a href="#toc_tc440909">NT-QA-04-1433: Share file/'s with a Skype contact by using &quot;Add files&quot; button</a></p><p style="padding-left: 75px;"><a href="#toc_tc441002">NT-QA-04-1469: Close the app by using the &quot;Sign out&quot; button</a></p><p style="padding-left: 75px;"><a href="#toc_tc441321">NT-QA-04-1600: Delete account using &quot;Close your account&quot;</a></p><b><p style="padding-left: 40px;"><a href="#toc_1_1_2">1.1.2.Functional Testing</a></p></b>
+<b><p style="padding-left: 50px;"><a href="#toc_1_1_2_1">1.1.2.1.Create Account</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc441363">NT-QA-04-1619: Verify that &quot;Tab&quot; key functionality is working properly or not</a></p><p style="padding-left: 90px;"><a href="#toc_tc441430">NT-QA-04-1638: Verify that &quot;Enter&quot; key works as a substitute for the Next / Continue button</a></p><p style="padding-left: 90px;"><a href="#toc_tc441365">NT-QA-04-1620: Verify that the User can modify / delete the credentials while trying to register</a></p><p style="padding-left: 90px;"><a href="#toc_tc441048">NT-QA-04-1483: Verify that User can register by using valid credentials</a></p><p style="padding-left: 90px;"><a href="#toc_tc441369">NT-QA-04-1622: Verify that User cannot register by using invalid credentials</a></p><p style="padding-left: 90px;"><a href="#toc_tc441376">NT-QA-04-1625: Verify that User cannot register with a valid Phone Number and a Country Code that does not match</a></p><p style="padding-left: 90px;"><a href="#toc_tc441378">NT-QA-04-1626: Verify that User cannot register by using an already registered Email Address or Phone number</a></p><p style="padding-left: 90px;"><a href="#toc_tc441380">NT-QA-04-1627: Verify that the password is in encrypted form (*) when entered</a></p><p style="padding-left: 90px;"><a href="#toc_tc441382">NT-QA-04-1628: Verify that the password cannot be copy-pasted</a></p><p style="padding-left: 90px;"><a href="#toc_tc441384">NT-QA-04-1629: Verify that the &quot;Show password&quot; checking box is working properly or not</a></p><p style="padding-left: 90px;"><a href="#toc_tc441432">NT-QA-04-1639: Verify that User cannot insert special characters or &quot;Space&quot; key as First name / Last name</a></p><p style="padding-left: 90px;"><a href="#toc_tc441436">NT-QA-04-1641: Verify that the &quot;Date of birth&quot; field should not allow dates greater than current date</a></p><p style="padding-left: 90px;"><a href="#toc_tc441455">NT-QA-04-1650: Verify that the input from &quot;Country/Region&quot; list matches the Country Code of the Phone number</a></p><p style="padding-left: 90px;"><a href="#toc_tc441459">NT-QA-04-1652: Verify that User cannot continue registration without verify the Email Address</a></p><p style="padding-left: 90px;"><a href="#toc_tc441469">NT-QA-04-1656: Verify that User cannot verify the Email Address with an invalid unique code</a></p><p style="padding-left: 90px;"><a href="#toc_tc441715">NT-QA-04-1732: Verify that User cannot successfully registrate while skipping  &quot;Captcha&quot; challenge</a></p><p style="padding-left: 90px;"><a href="#toc_tc441717">NT-QA-04-1733: Verify that User must insert valid data in the &quot;Captcha&quot; challenge in order to pass it</a></p><p style="padding-left: 90px;"><a href="#toc_tc441995">NT-QA-04-1824: Verify that password can't contain the part of your email address that comes before the @sign</a></p><b><p style="padding-left: 50px;"><a href="#toc_1_1_2_2">1.1.2.2.Sign In</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc441325">NT-QA-04-1602: Verify that the &quot;Tab&quot; key functionality is working properly or not</a></p><p style="padding-left: 90px;"><a href="#toc_tc441428">NT-QA-04-1637: Verify that &quot;Enter&quot; key works as a substitute for the Next / Continue button</a></p><p style="padding-left: 90px;"><a href="#toc_tc441329">NT-QA-04-1604: Verify that the User can modify / delete the credentials while trying to Sign In</a></p><p style="padding-left: 90px;"><a href="#toc_tc441059">NT-QA-04-1488: Verify that the User can Sign In using a saved account</a></p><p style="padding-left: 90px;"><a href="#toc_tc441050">NT-QA-04-1484: Verify that the User can Sign In using valid credentials</a></p><p style="padding-left: 90px;"><a href="#toc_tc441345">NT-QA-04-1612: Verify that the User has a limited amount of tries to Sign In using invalid passwords</a></p><p style="padding-left: 90px;"><a href="#toc_tc441367">NT-QA-04-1621: Verify that User cannot Sign In by inserting only a &quot;Space&quot; tap in the Password field</a></p><p style="padding-left: 90px;"><a href="#toc_tc441331">NT-QA-04-1605: Verify that the User cannot Sign In using invalid credentials</a></p><p style="padding-left: 90px;"><a href="#toc_tc441305">NT-QA-04-1597: Verify that the User cannot Sign In with an empty field (Skype, phone or email)</a></p><p style="padding-left: 90px;"><a href="#toc_tc441310">NT-QA-04-1599: Verify that the User cannot Sign In with an unregistered Skype name / Phone Number or Email Address</a></p><p style="padding-left: 90px;"><a href="#toc_tc441351">NT-QA-04-1615: Verify that User cannot attempt to recover the Skype Name without introducing an Email Adress</a></p><p style="padding-left: 90px;"><a href="#toc_tc441335">NT-QA-04-1607: Verify that the password is in encrypted form (*) when entered</a></p><p style="padding-left: 90px;"><a href="#toc_tc441337">NT-QA-04-1608: Verify that the password cannot be copy-pasted</a></p><p style="padding-left: 90px;"><a href="#toc_tc441343">NT-QA-04-1611: Verify that the User cannot Sign In with the old password after resetting it</a></p><p style="padding-left: 90px;"><a href="#toc_tc441349">NT-QA-04-1614: Verify that User can save credentials before Singing Out from Skype</a></p><p style="padding-left: 90px;"><a href="#toc_tc442520">NT-QA-04-1901: Verify that User cannot attempt to recover Skype Name with an invalid Email Address</a></p><p style="padding-left: 90px;"><a href="#toc_tc442522">NT-QA-04-1902: Verify that User cannot attempt to recover the Skype Name without the code received via Email Adress</a></p><b><p style="padding-left: 50px;"><a href="#toc_1_1_2_3">1.1.2.3.Search</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc441751">NT-QA-04-1747: Verify that User can insert and search by using any other alphabetical signs beside the &quot;Latin&quot; ones</a></p><p style="padding-left: 90px;"><a href="#toc_tc441758">NT-QA-04-1750: Verify that when User starts typing a word in text field, suggestions are being displayed</a></p><p style="padding-left: 90px;"><a href="#toc_tc441762">NT-QA-04-1752: Verify that the inserted input remains, if User is navigating outside the &quot;Search&quot; funtionality</a></p><p style="padding-left: 90px;"><a href="#toc_tc441778">NT-QA-04-1759: Verify that search results should be cleared on clicking on &quot;Close Search&quot; button</a></p><p style="padding-left: 90px;"><a href="#toc_tc441785">NT-QA-04-1762: Verify that Use can successfully search by Names / Phone numbers / Emails address or Messages</a></p><p style="padding-left: 90px;"><a href="#toc_tc441792">NT-QA-04-1765: Verify that search keyword should get highlighted with color in the search results field</a></p><p style="padding-left: 90px;"><a href="#toc_tc444008">NT-QA-04-2270: Verify that User gets an alert message when searching by special characters</a></p><b><p style="padding-left: 50px;"><a href="#toc_1_1_2_4">1.1.2.4.Connecting via Video &amp; Audio</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc442631">NT-QA-04-1914: Initiate a video call with a Skype contact</a></p><p style="padding-left: 90px;"><a href="#toc_tc442638">NT-QA-04-1915: End a call with an existing Skype contact</a></p><p style="padding-left: 90px;"><a href="#toc_tc442647">NT-QA-04-1916: Initiate an audio call with a Skype contact</a></p><p style="padding-left: 90px;"><a href="#toc_tc442649">NT-QA-04-1917: Disable the microphone in a call by using the &quot;Mute&quot; button</a></p><p style="padding-left: 90px;"><a href="#toc_tc442651">NT-QA-04-1918: Enable the microphone in a call by using the &quot;Unmute&quot; button</a></p><p style="padding-left: 90px;"><a href="#toc_tc442656">NT-QA-04-1919: Verify if User can decline an incoming call</a></p><p style="padding-left: 90px;"><a href="#toc_tc442658">NT-QA-04-1920: Verify if User can accept, decline and hear to voice call over headphones</a></p><p style="padding-left: 90px;"><a href="#toc_tc442660">NT-QA-04-1921: Disable the camera in a call by using &quot;Turn video off&quot; button</a></p><p style="padding-left: 90px;"><a href="#toc_tc442662">NT-QA-04-1922: Enable the camera in a call by using &quot;Turn video on&quot; button</a></p><p style="padding-left: 90px;"><a href="#toc_tc442717">NT-QA-04-1930: Verify if User is receiving the correct image via video call, not a mirrored image</a></p><p style="padding-left: 90px;"><a href="#toc_tc443214">NT-QA-04-1992: Performing video/audio call to a recipient whose app is in background</a></p><b><p style="padding-left: 50px;"><a href="#toc_1_1_2_5">1.1.2.5.Connecting via Messaging</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc442664">NT-QA-04-1923: Initiate conversation with a Skype contact by using instant messages</a></p><p style="padding-left: 90px;"><a href="#toc_tc442674">NT-QA-04-1925: Verify is User can send  multiple text message to the receiver</a></p><p style="padding-left: 90px;"><a href="#toc_tc442676">NT-QA-04-1926: Verify if User if there is a limit to the characters that can be sent to  a receiver</a></p><p style="padding-left: 90px;"><a href="#toc_tc442678">NT-QA-04-1927: Verify that User cannot send a blank message to a receiver</a></p><p style="padding-left: 90px;"><a href="#toc_tc443116">NT-QA-04-1957: Verify if message text accept emoticons in text format or image format</a></p><p style="padding-left: 90px;"><a href="#toc_tc443220">NT-QA-04-1995: Verify if User can modify text while writing it in the text field</a></p><p style="padding-left: 90px;"><a href="#toc_tc443224">NT-QA-04-1997: Verify if User can edit the text after sending it to the recipient</a></p><p style="padding-left: 90px;"><a href="#toc_tc443226">NT-QA-04-1998: Verify if User can copy text from the chat window</a></p><p style="padding-left: 90px;"><a href="#toc_tc443230">NT-QA-04-2000: Verify if User can reply/quote to sent or received text messges</a></p><p style="padding-left: 90px;"><a href="#toc_tc443234">NT-QA-04-2002: Verify if User can forward certain text messeges</a></p><p style="padding-left: 90px;"><a href="#toc_tc443238">NT-QA-04-2004: Verify if User can add certain selected text messeges to &quot;Bookmarks&quot;</a></p><p style="padding-left: 90px;"><a href="#toc_tc444242">NT-QA-04-2336: Verify that User cannot send a blank message to a receiver, even using a copy paste as content</a></p><b><p style="padding-left: 50px;"><a href="#toc_1_1_2_6">1.1.2.6.Share</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc442666">NT-QA-04-1924: Share file/'s with a Skype contact by using &quot;Add files&quot; button</a></p><p style="padding-left: 90px;"><a href="#toc_tc443246">NT-QA-04-2007: Verify that User cannot send files bigger than 300 MB's</a></p><p style="padding-left: 90px;"><a href="#toc_tc443249">NT-QA-04-2008: Verify that User can share screen</a></p><p style="padding-left: 90px;"><a href="#toc_tc443253">NT-QA-04-2010: Verify that User can share her/his contact details</a></p><p style="padding-left: 90px;"><a href="#toc_tc443342">NT-QA-04-2043: Verify if user can share computer sound</a></p><p style="padding-left: 90px;"><a href="#toc_tc444268">NT-QA-04-2345: Share file/'s with a Skype contact by drag &amp; drop into the chat field</a></p><b><p style="padding-left: 50px;"><a href="#toc_1_1_2_7">1.1.2.7.Sidebar</a></p></b>
+<p style="padding-left: 90px;"><a href="#toc_tc443995">NT-QA-04-2265: Verify that Skype displays in real-time the availability of contacts</a></p><p style="padding-left: 90px;"><a href="#toc_tc444020">NT-QA-04-2276: Verify if User can enable split view mode</a></p><p style="padding-left: 90px;"><a href="#toc_tc444024">NT-QA-04-2278: Verify if User can disable the split view menu</a></p><p style="padding-left: 90px;"><a href="#toc_tc444032">NT-QA-04-2282: Verify is User can sign out from the &quot;more&quot; option menu</a></p></div><h1 class="doclevel" >Scope</h1>
+<div class="txtlevel"><p>
+	Final project</p></div>
+ <br/><a name='toc_'></a>
+<h1 class='doclevel'>1.Test Suite : Croitoru Dan-Nicolae</h1>
+<a name='toc_'></a>
+<h2 class='doclevel'>1.1.Test Suite : Skype for Desktop (version 8.67.0.99)</h2>
+<a name='toc_'></a>
+<h3 class='doclevel'>1.1.1.Test Suite : Smoke Testing</h3>
+<a name="toc_tc440880"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1425: Register using valid credentials&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Open Skype application</p>
+<p>
+	2. Click on &quot;Sign In or Create&quot; button and choose &quot;Create one !&quot;</p>
+<p>
+	3. Perform registration using valid credentials and data</p>
+<p>
+	Expected results:</p>
+<p>
+	Registration Successfully</p>
+<p>
+	&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed</p>
+<p>
+	2.Valid data: Skype name (Between 6 - 32 characters long and all Skype names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc440882"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1426: Log In using valid credentials&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Sign In or Create&quot; button</div>
+<div>
+	2. Enter valid credentials</div>
+<div>
+	3. Click on &quot;Sign In&quot; button</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	Logged in Successfully</div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<p>
+	2.Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc440890"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1427: Search for an existing Skype User&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click onto the &quot;Search&quot; bar, located in the upper part of the sidebar</p>
+<p>
+	2. Type and search using credentials of a possible Skype user</p>
+<p>
+	Expected results:</p>
+<p>
+	Search an existing Skype user and be able to find the user.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<p>
+	2. Be logged in</p>
+<p>
+	3. Search by users credentials: Name, Skype name, Phone Number or Email Address</p>
+<p>
+	4.Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc440894"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1428: Add to contacts and existing Skype User&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click onto the &quot;Search&quot; bar, located in the upper part of the sidebar&nbsp;</div>
+<div>
+	2 . Search and find an existing Skype user</div>
+<div>
+	3. Right-click onto the contact list of the user and chose &quot;Add to contact&quot;</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Search an existing Skype user, find the user and add to contacts</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Search by users credentials: Name, Skype name, Phone Number or Email Address</div>
+<div>
+	3.&nbsp;Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+<div>
+	&nbsp;</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc440936"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1440: Add new contact by using &quot;New Contact&quot; button&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Navigate to &quot;&quot;Contacts&quot; button, located in the upper part of the side bar</div>
+<div>
+	2. Click onto the &quot;New Contact&quot; button, located in the middle-upper part of the sidebar&nbsp;</div>
+<div>
+	3. Search and find an existing Skype user by inserting his/her credentials in the text field, located in the upper section of the &quot;Add a new contact&quot; window</div>
+<div>
+	4. Right-click onto the contact list of the user and chose &quot;Add to contact&quot;</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Search an existing Skype user, find the user and add to contacts</div>
+<div>
+	&nbsp;</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Search by users credentials: Name, Skype name, Phone Number or Email Address</div>
+<div>
+	3.&nbsp;Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc440955"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1449: Add new contact by inviting them to Skype&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click onto the &quot;New Contact&quot; button, located in the middle-upper part of the sidebar&nbsp;</div>
+<div>
+	2. Click onto the &quot;Invite to Skype&quot; button, located in the middle of the window&nbsp;</div>
+<div>
+	3. Click onto the &quot;Copy to clipboard&quot; button, located at the upper-bottom of the page and share the content with the future Skype user</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Invite successfully a non-skype user to join skype by using a generated link</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	&nbsp;</div>
+<div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Search by users credentials: Name, Skype name, Phone Number or Email Address</div>
+<div>
+	&nbsp;</div>
+<div>
+	3. The future Skype user must accept and use the link</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc440899"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1429: Initiate a video call with a Skype contact&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</p>
+<p>
+	2. Select an existing contact</p>
+<p>
+	3. Click on the video call button, located in the righ upper corner of the window</p>
+<p>
+	Expected results:</p>
+<p>
+	Initiate the video call with an existing contact successully&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+<div>
+	&nbsp;</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc440915"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1434: End a video call with an existing Skype contact&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Be angaged in a video call</div>
+<div>
+	2. End the video call by pressing the &quot;End call&quot; button, located at the bottom of the window</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	End the video call succesully</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+<div>
+	&nbsp;</div>
+<div>
+	3. Be angaged in a video call</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc440901"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1430: Initiate an audio call with a Skype contact&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	&nbsp;</div>
+<div>
+	3. Click on the audio call button, located in the righ upper corner of the window</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Initiate the audio call with an existing contact successully</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc440917"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1435: End an audio call with an existing Skype contact&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1.&nbsp;Be angaged in a call</div>
+<div>
+	2. End the call by pressing the &quot;End call&quot; button, located at the bottom of the window</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	End the audio call succesully</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+<div>
+	&nbsp;</div>
+<div>
+	3. Be angaged into an audio call&nbsp;</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc440968"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1452: Disable the microphone in a call by using the &quot;Mute&quot; button&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Engage into a call with an existing Skype user</div>
+<div>
+	2. Click on the &quot;Mute&quot; button</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Disable the microphone successully</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Be angaged in a call</div>
+<div>
+	3. Have an operating microphone</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc440972"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1454: Enable the microphone in a call by using the &quot;Unmute&quot; button&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Engage into a call with an existing Skype user</div>
+<div>
+	2. Click on the &quot;Unmute&quot; button</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Enable the microphone successully</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Be angaged in a call</div>
+<div>
+	3. Have an operating microphone</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc440905"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1432: Initiate conversation with a Skype contact by using instant messages&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	&nbsp;</div>
+<div>
+	3. Click onto the text field, located at the left-bottom corner of the window and engage into a conversation&nbsp;throgh instant messages</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Initiate the conversation with an existing contact succesully&nbsp;throgh instant messages</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc440909"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1433: Share file/'s with a Skype contact by using &quot;Add files&quot; button&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	3. Click onto the &quot;Add files&quot; button, located at the bottom of the window</div>
+<div>
+	4. Select a valid file and press the &quot;Send message&quot; button, located at the bottom-right corner of the window</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	File send succesfully</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+<div>
+	&nbsp;</div>
+<div>
+	3. Valid file: Up to 300 mb file size</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441002"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1469: Close the app by using the &quot;Sign out&quot; button&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Loggin to Skype</p>
+<p>
+	2. Left-click / Select the profile icon</p>
+<p>
+	3. Select the &quot;Sign out&quot; button, located in the right-upper corner of the Microsoft Manager window</p>
+<p>
+	4. Chose if you want to save the account and settings&nbsp;</p>
+<p>
+	Expected results:</p>
+<p>
+	Sign out succesfully&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441321"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1600: Delete account using &quot;Close your account&quot;&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Left-click / Select the profile icon</p>
+<p>
+	2. Select the &quot;Settings&quot; icon and from the first list, &quot;Account &amp; Profile&quot;, select &quot;Close your account&quot; and enter your credentials</p>
+<p>
+	3. Enter your credentials and an verify the email address with the recieved code</p>
+<p>
+	4. Check all the checkboxes, select a reason and press on &quot;Mark account for closure&quot;</p>
+<p>
+	&nbsp;</p>
+<p>
+	Expected results:</p>
+<p>
+	Delete account successfully</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<p>
+	2. Be loggen in</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h3 class='doclevel'>1.1.2.Test Suite : Functional Testing</h3>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.2.1.Test Suite : Create Account</h4>
+<a name="toc_tc441363"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1619: Verify that &quot;Tab&quot; key functionality is working properly or not&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Proceed to the registration process&nbsp;</p>
+<p>
+	2. Check if &quot;Tab&quot; key can be used to navigate&nbsp;throgh fields and buttons</p>
+<p>
+	Expected results:&nbsp;</p>
+<p>
+	User should be able to use the tab key to navigate the field texts and buttons</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441430"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1638: Verify that &quot;Enter&quot; key works as a substitute for the Next / Continue button&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:&nbsp;</p>
+<p>
+	1. Proceed to the registration process</p>
+<p>
+	2.&nbsp;Check if &quot;Enter&quot; key can substitute the &quot;Next&quot; or &quot;Continue &quot; buttons to navigate&nbsp;throgh registration</p>
+<p>
+	Expected results:</p>
+<p>
+	&quot;Enter&quot; key should substitute for the&nbsp;&quot;Next&quot; and &quot;Continue &quot; buttons</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441365"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1620: Verify that the User can modify / delete the credentials while trying to register&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:&nbsp;</p>
+<p>
+	1. Proceed to the registration</p>
+<p>
+	2. Enter credentials in the text fields</p>
+<p>
+	3. Attetempt to modify credentials before moving to the next step</p>
+<p>
+	Expected retuls:</p>
+<p>
+	User should be able to modify credentials before moving to the next step</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	&nbsp;</div>
+<div>
+	1. Have Skype for Desktop installed and running</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441048"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1483: Verify that User can register by using valid credentials&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Open Skype application</p>
+<p>
+	2. Click on &quot;Sign In or Create&quot; button and chose &quot;Create one !&quot;</p>
+<p>
+	3. Perform registration using valid credentials and data</p>
+<p>
+	Expected results:</p>
+<p>
+	User should be able to finish registration successfully</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed&nbsp;</p>
+<p>
+	2.Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441369"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1622: Verify that User cannot register by using invalid credentials&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Open Skype application</p>
+<p>
+	2. Click on &quot;Sign In or Create&quot; button and chose &quot;Create one !&quot;</p>
+<p>
+	3. Perform registration using invalid credentials and data</p>
+<p>
+	Expected results:</p>
+<p>
+	User should not be able to registrate, error messages should be displayed</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed</div>
+<div>
+	2.Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441376"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1625: Verify that User cannot register with a valid Phone Number and a Country Code that does not match&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Proceed to the registration process</p>
+<p>
+	2. Insert in the text field a valid phone number</p>
+<p>
+	3.&nbsp; Select a country code that does not match the phone numbers origin</p>
+<p>
+	Expected results:&nbsp;</p>
+<p>
+	User should not be able to proceed to the next registration step, error messages should be displayed</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed</div>
+<div>
+	2. Own an unregistered (Skype) phone number&nbsp;</div>
+<div>
+	3. Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441378"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1626: Verify that User cannot register by using an already registered Email Address or Phone number&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click onto the &quot;Create Account&quot; text field and use an already registered Email Address or Phone number</p>
+<p>
+	2. Click on the &quot;Next&quot; button to continue</p>
+<p>
+	Expected results:&nbsp;</p>
+<p>
+	User should not be able to continue the registration process. An error message should be displayed</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Atteptm the process of registration</div>
+<div>
+	3. Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441380"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1627: Verify that the password is in encrypted form (*) when entered&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click onto the &quot;Password&quot; text field</p>
+<p>
+	2. Insert in the text field a valid form of password</p>
+<p>
+	Expected results:</p>
+<p>
+	Password should be in encrypted form (*)</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Attempt to perform registration</div>
+<div>
+	3. Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441382"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1628: Verify that the password cannot be copy-pasted&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click onto the &quot;Password&quot; text field and insert in the text field a valid form of password</p>
+<p>
+	2. Attempt copying the password by selecting the password and using the keyboard combination &quot;Ctrl+C&quot;</p>
+<p>
+	3. Attempt pasting the copied content by using&nbsp;the keyboard combination &quot;Ctrl+V&quot;</p>
+<p>
+	Expected results:</p>
+<p>
+	Password should not be able to be copy-pasted</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed</div>
+<div>
+	2. Attempt to perform registration</div>
+<div>
+	3. Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441384"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1629: Verify that the &quot;Show password&quot; checking box is working properly or not&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click onto the &quot;Password&quot; text field</p>
+<p>
+	2. Insert in the text field a valid form of password</p>
+<p>
+	3. Check the &quot;Show Password&quot; check-box</p>
+<p>
+	Expected results:</p>
+<p>
+	Password should be visible to read from the encrypted form (*)</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Attempt to perform registration</div>
+<div>
+	3. Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441432"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1639: Verify that User cannot insert special characters or &quot;Space&quot; key as First name / Last name&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Insert credentials (Email Address or Phone number, and Password) and click on &quot;Next&quot; button</p>
+<p>
+	2. At &quot;What is your name&quot; text field, write your first name and last name using special characters or &quot;Space&quot; taps</p>
+<p>
+	Expected results:</p>
+<p>
+	User should not be able to insert special characters or &quot;Space&quot; taps in the text fields, alert message should be displayed</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Attempt to perform registration</div>
+<div>
+	3. Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441436"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1641: Verify that the &quot;Date of birth&quot; field should not allow dates greater than current date&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Insert credentials (Email Address or Phone number, Password and First &amp; Last name) and click on &quot;Next&quot; button</p>
+<p>
+	2. At &quot;Date of birth&quot; drop-box, insert datas greater than current date</p>
+<p>
+	Expected results:</p>
+<p>
+	&quot;Date of birth&quot; datas should not be greater than current day. Error message should be displayed</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<p>
+	2. Attempt registration process</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441455"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1650: Verify that the input from &quot;Country/Region&quot; list matches the Country Code of the Phone number&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Insert credentials (Email Address or Phone number, Password and First &amp; Last name) and click on &quot;Next&quot; button</p>
+<p>
+	2. Verify that &quot;Country/Region&quot; drop-box is displaying the matching country of the used Phone number</p>
+<p>
+	Expected results:</p>
+<p>
+	The input should match the country of thephone number used for registration</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<p>
+	2. Attempt registration process</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441459"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1652: Verify that User cannot continue registration without verify the Email Address&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click on &quot;Sign In or Create&quot; button and chose &quot;Create one !&quot;</p>
+<p>
+	2. Proceed registration with valid datas till you get to &quot;Verify email&quot; check-point</p>
+<p>
+	3. Click on &quot;Next&quot; button</p>
+<p>
+	Expected results:</p>
+<p>
+	User should not be able to continue without verifying the Email Address, alert message is being displayed</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Attempt registration process</div>
+<div>
+	3. Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441469"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1656: Verify that User cannot verify the Email Address with an invalid unique code&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click on &quot;Sign In or Create&quot; button and chose &quot;Create one !&quot;</p>
+<p>
+	2. Proceed registration with valid datas till you get to &quot;Verify email&quot; check-point</p>
+<p>
+	3. Click onto the&nbsp;&quot;Verify email&quot; text field and insert a random character combination</p>
+<p>
+	4. Click on &quot;Next&quot; button</p>
+<p>
+	Expected results:</p>
+<p>
+	User should not be able to continue without the exactly same unique code received via the Email Address, alert message is being displayed</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Attempt registration process</div>
+<div>
+	3. Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441715"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1732: Verify that User cannot successfully registrate while skipping  &quot;Captcha&quot; challenge&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click on &quot;Sign In or Create&quot; button and chose &quot;Create one !&quot;</p>
+<p>
+	2. Proceed registration with valid datas till you get to &quot;Captcha&quot; check-point</p>
+<p>
+	3. Click on &quot;Next&quot; button</p>
+<p>
+	Expected results:</p>
+<p>
+	User should not be able to finish registration by pressing the &quot;Next&quot; button, alert message should be displayed</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Attempt registration process</div>
+<div>
+	3. Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441717"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1733: Verify that User must insert valid data in the &quot;Captcha&quot; challenge in order to pass it&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click on &quot;Sign In or Create&quot; button and chose &quot;Create one !&quot;</p>
+<p>
+	2. Proceed registration with valid datas ultill you get to &quot;Captcha&quot; check-point</p>
+<p>
+	3. Attempt the &quot;Captcha&quot; challenge with different datas than required</p>
+<p>
+	4. Click on &quot;Next&quot; button</p>
+<p>
+	Expected results:</p>
+<p>
+	User should not be able to finish the registration process by click on &quot;Next&quot; button, alert message is being displayed</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Attempt registration process</div>
+<div>
+	3. Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441995"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1824: Verify that password can't contain the part of your email address that comes before the @sign&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click onto the &quot;Password&quot; text field</p>
+<p>
+	2. Insert in the text field your Email Address part before the @s ign</p>
+<p>
+	Expected results:</p>
+<p>
+	System should let accept the password, an alert message should be displayed</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<p>
+	2. Attempt to perform registration</p>
+<p>
+	3. Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.2.2.Test Suite : Sign In</h4>
+<a name="toc_tc441325"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1602: Verify that the &quot;Tab&quot; key functionality is working properly or not&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Proceed to the registration process&nbsp;</p>
+<p>
+	2. Check if &quot;Tab&quot; key can be used to navigate&nbsp;throgh fields and buttons</p>
+<p>
+	Expnsected results:&nbsp;</p>
+<p>
+	User should be able to use the tab key to navigate the field texts and button</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441428"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1637: Verify that &quot;Enter&quot; key works as a substitute for the Next / Continue button&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:&nbsp;</p>
+<p>
+	1. Proceed to the registration process</p>
+<p>
+	2.&nbsp;Check if &quot;Enter&quot; key can substitute the &quot;Next&quot; or &quot;Continue &quot; buttons to navigate&nbsp;throgh registration</p>
+<p>
+	Expected results:</p>
+<p>
+	&quot;Enter&quot; key should substitute for the&nbsp;&quot;Next&quot; and &quot;Continue &quot; buttons</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441329"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1604: Verify that the User can modify / delete the credentials while trying to Sign In&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:&nbsp;</p>
+<p>
+	1. Proceed to the registration</p>
+<p>
+	2. Enter credentials in the text fields</p>
+<p>
+	3. Attetempt to modify credentials before moving to the next step</p>
+<p>
+	Expected retuls:</p>
+<p>
+	User should be able to modify credentials before moving to the next step</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441059"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1488: Verify that the User can Sign In using a saved account&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Open Skype app</div>
+<div>
+	2. Select from the &quot;Sign in with ...&quot; window the saved account, which is located at the middle of the app</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Sign in successfully using an account which was saved by the app</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<p>
+	2. Perform forehand a successfull loggin, and before closing the app, choose to save the account data and settings</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441050"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1484: Verify that the User can Sign In using valid credentials&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Sign In or Create&quot; button</div>
+<div>
+	2. Enter valid credentials</div>
+<div>
+	3. Click on &quot;Sign In&quot; button</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Logged in Successfully</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<p>
+	2.Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441345"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1612: Verify that the User has a limited amount of tries to Sign In using invalid passwords&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Proceed to the registration process</p>
+<p>
+	2. Insert in the text field a valid Phone number or Email Address and press on &quot;Next&quot;</p>
+<p>
+	3. At &quot;Enter password&quot; text field, insert multiple form of invalid password</p>
+<p>
+	Expected results:&nbsp;</p>
+<p>
+	User should not be able have unlimited tries to insert the password</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<p>
+	2.Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441367"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1621: Verify that User cannot Sign In by inserting only a &quot;Space&quot; tap in the Password field&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Proceed to the registration process</p>
+<p>
+	2. Insert in the text field a valid Phone number or Email Address and press on &quot;Next&quot;</p>
+<p>
+	3. At &quot;Enter password&quot; text field, insert one or multiple &quot;Space&quot; taps&nbsp;</p>
+<p>
+	Expected results:&nbsp;&nbsp;</p>
+<p>
+	User should not be able to use &quot;Space&quot; taps as password</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<p>
+	2.Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441331"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1605: Verify that the User cannot Sign In using invalid credentials&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Sign In or Create&quot; button</div>
+<div>
+	2. Enter invalid credentials</div>
+<div>
+	3. Click on &quot;Next&quot; button</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	User should not be able to proceed to the next step, or to login succesfully. Error message should be displayed</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<p>
+	2.Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441305"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1597: Verify that the User cannot Sign In with an empty field (Skype, phone or email)&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Sign In or Create&quot; button</div>
+<div>
+	2. Click on &quot;Next&quot; without introducing anything in the field text</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results</div>
+<div>
+	&nbsp;</div>
+<div>
+	User should not be able to continue, error message is being displayed</div>
+<div>
+	&nbsp;</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	&nbsp;</div>
+<div>
+	2.Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441310"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1599: Verify that the User cannot Sign In with an unregistered Skype name / Phone Number or Email Address&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Sign In or Create&quot; button</div>
+<div>
+	2. Enter unregistered Skype name</div>
+<div>
+	3. Click on &quot;Next&quot; button</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results</div>
+<div>
+	&nbsp;</div>
+<div>
+	User is not able to continue and error message is being displayed</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	&nbsp;</div>
+<div>
+	2.Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441351"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1615: Verify that User cannot attempt to recover the Skype Name without introducing an Email Adress&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click on &quot;Sign In or Create&quot; button and chose &quot;Create one !&quot; or &quot;User another account&quot;</p>
+<p>
+	2. Click on &quot;Sign-In options&quot; and select the third option from the top, &quot;? Forgot my username&quot;</p>
+<p>
+	3. Click onto the &quot;Next&quot; button</p>
+<p>
+	Expected results:</p>
+<p>
+	System should not permit user to continue by pressing on &quot;Next&quot;, error message is being displayed</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441335"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1607: Verify that the password is in encrypted form (*) when entered&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Proceed to the registration process</p>
+<p>
+	2. Insert in the text field a valid Phone number or Email Address and press on &quot;Next&quot;</p>
+<p>
+	3. At &quot;Enter password&quot; text field, insert a valid password&nbsp;</p>
+<p>
+	Expected results:&nbsp;&nbsp;</p>
+<p>
+	Password should be in encrypted form (*)</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<p>
+	2.Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441337"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1608: Verify that the password cannot be copy-pasted&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click onto the &quot;Password&quot; text field and insert in the text field a valid form of password</p>
+<p>
+	2. Attempt copying the password by selecting the password and using the keyboard combination &quot;Ctrl+C&quot;</p>
+<p>
+	3. Attempt pasting the copied content by using&nbsp;the keyboard combination &quot;Ctrl+V&quot;</p>
+<p>
+	Expected results:</p>
+<p>
+	Password should not be able to be copy-pasted</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed</div>
+<div>
+	2. Attempt to perform registration</div>
+<div>
+	3. Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441343"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1611: Verify that the User cannot Sign In with the old password after resetting it&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Attempt a successful change of password&nbsp;</p>
+<p>
+	2. Click on &quot;Sign In or Create&quot; button and chose &quot;Create one !&quot; or &quot;User another account&quot;</p>
+<p>
+	3. Click onto the text field and introduce an valid Email Address and press on the &quot;Next&quot; button</p>
+<p>
+	4. User should use the old password and press onto the &quot;Next&quot; button</p>
+<p>
+	Expected results:&nbsp;</p>
+<p>
+	System should not permit user to continue, error message should be displayed</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed</div>
+<div>
+	2.Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (Passwords must have at least 8 characters and contain at least two of the following: upper case letters, lower case letters, numbers and symbols and fields marked with *)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441349"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1614: Verify that User can save credentials before Singing Out from Skype&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:&nbsp;</p>
+<p>
+	1. Perform an succesfful login into Skype</p>
+<p>
+	2. Left-click / Select the profile icon</p>
+<p>
+	3. Select the &quot;Sign out&quot; button, located in the right-upper corner of the Microsoft Manager window</p>
+<p>
+	4. Select &quot;Yes&quot; when being asked if you want to remember this account</p>
+<p>
+	Expected results:</p>
+<p>
+	Sign out succesfully and have the account remembered</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed</div>
+<div>
+	2.Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (Passwords must have at least 8 characters and contain at least two of the following: upper case letters, lower case letters, numbers and symbols and fields marked with *)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc442520"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1901: Verify that User cannot attempt to recover Skype Name with an invalid Email Address&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click on &quot;Sign In or Create&quot; button and chose &quot;Create one !&quot; or &quot;User another account&quot;</p>
+<p>
+	2. Click on &quot;Sign-In options&quot; and select the third option from the top, &quot;? Forgot my username&quot;</p>
+<p>
+	3. Click onto the text field and introduce an invalid form of Email Address</p>
+<p>
+	4. Click onto the &quot;Next&quot; button</p>
+<p>
+	Expected results:</p>
+<p>
+	System should not permit user to continue by pressing on &quot;Next&quot;, alert message is being displayed</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc442522"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1902: Verify that User cannot attempt to recover the Skype Name without the code received via Email Adress&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	teps:</p>
+<p>
+	1. Click on &quot;Sign In or Create&quot; button and chose &quot;Create one !&quot; or &quot;User another account&quot;</p>
+<p>
+	2. Click on &quot;Sign-In options&quot; and select the third option from the top, &quot;? Forgot my username&quot;</p>
+<p>
+	3. Click onto the text field and introduce a valid form of Email Address and click onto the &quot;Next&quot; button</p>
+<p>
+	4. Click onto the &quot;Next&quot; button with leaving the text field emphty</p>
+<p>
+	Expected results:</p>
+<p>
+	System should not permit user to continue by pressing on &quot;Next&quot;, alert message is being displayed</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<div>
+	2. Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.2.3.Test Suite : Search</h4>
+<a name="toc_tc441751"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1747: Verify that User can insert and search by using any other alphabetical signs beside the &quot;Latin&quot; ones&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click onto the &quot;Search&quot; bar, located in the upper part of the sidebar</p>
+<p>
+	2. Type and search after credentials of a possible Skype user using any other alphabetical signs beside the &quot;Latin&quot; ones</p>
+<p>
+	Expected results:</p>
+<p>
+	User should be also able to search by using other type of alphabetical signs besides the&nbsp;&quot;Latin&quot; ones</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Be singned in</div>
+<div>
+	3. Alphabetical signs should belogn to an official language, spoken or written</div>
+<div>
+	&nbsp;</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441758"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1750: Verify that when User starts typing a word in text field, suggestions are being displayed&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click onto the &quot;Search&quot; bar, located in the upper part of the sidebar</p>
+<p>
+	2. Type the first letters that can belong to a Skype user</p>
+<p>
+	Expected results:</p>
+<p>
+	System should display a list os suggested user that match those first letters</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Search by users credentials: Name, Skype name, Phone Number or Email Address</div>
+<div>
+	3.&nbsp;Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441762"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1752: Verify that the inserted input remains, if User is navigating outside the &quot;Search&quot; funtionality&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click onto the &quot;Search&quot; bar, located in the upper part of the sidebar</p>
+<p>
+	2. Type and search after a Skype user</p>
+<p>
+	3. Click onto any other funtionality, field or button</p>
+<p>
+	Expected results:</p>
+<p>
+	Content typed should remain in the text filed</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<p>
+	2. Be logged in</p>
+<p>
+	3. Search by users credentials: Name, Skype name, Phone Number or Email Address</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441778"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1759: Verify that search results should be cleared on clicking on &quot;Close Search&quot; button&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click onto the &quot;Search&quot; bar, located in the upper part of the sidebar</p>
+<p>
+	2. Type and search after a Skype user</p>
+<p>
+	3. Click onto the &quot;Close search&quot; button, located at the right-edge of the &quot;Search&quot; text field</p>
+<p>
+	Expected results:</p>
+<p>
+	Content typed should be cleared</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<p>
+	2. Be logged in</p>
+<p>
+	3. Search by users credentials: Name, Skype name, Phone Number or Email Address</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441785"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1762: Verify that Use can successfully search by Names / Phone numbers / Emails address or Messages&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click onto the &quot;Search&quot; bar, located in the upper part of the sidebar</p>
+<p>
+	2. Type and search using credentials of a possible Skype user</p>
+<p>
+	Expected results:</p>
+<p>
+	Search an existing Skype user and be able to find the user</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<p>
+	2. Be logged in</p>
+<p>
+	3. Search by users credentials: Name, Skype name, Phone Number or Email Address</p>
+<p>
+	4.&nbsp;Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc441792"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1765: Verify that search keyword should get highlighted with color in the search results field&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click onto the &quot;Search&quot; bar, located in the upper part of the sidebar</p>
+<p>
+	2. Type the first letters or keywords that can belong to a Skype user credentials</p>
+<p>
+	Expected results:</p>
+<p>
+	Keyword should be matched and highlighted with color in the result search list</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<p>
+	2. Be logged in</p>
+<p>
+	3. Search by users credentials: Name, Skype name, Phone Number or Email Address</p>
+<p>
+	4.&nbsp;Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc444008"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-2270: Verify that User gets an alert message when searching by special characters&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click onto the &quot;Search&quot; bar, located in the upper part of the sidebar</p>
+<p>
+	2. Insert special characters into the text field</p>
+<p>
+	Expected results:</p>
+<p>
+	System should not permit searching for contacts using special characters, since it&#39;s an invalid form for credentials. Error message should be displayed</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2.&nbsp;Valid data: Skype name (Between 6 - 32 characters long and all Skipe names are converted to lowercase letters); Phone number (Phone number can contain numbers, spaces and these special characters: ( ) [ ] . - * /); Email/&#39;s (Email field contains &quot;@&quot; character); Password (A Skype password must be 6 to 20 characters long and must contain at least one number and one letter)</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.2.4.Test Suite : Connecting via Video &amp; Audio</h4>
+<a name="toc_tc442631"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1914: Initiate a video call with a Skype contact&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</p>
+<p>
+	2. Select an existing contact</p>
+<p>
+	3. Click on the video call button, located in the righ upper corner of the window</p>
+<p>
+	Expected results:</p>
+<p>
+	Initiate the video call with an existing contact successully&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+<div>
+	&nbsp;</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc442638"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1915: End a call with an existing Skype contact&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Be angaged in a video call</div>
+<div>
+	2. End the video call by pressing the &quot;End call&quot; button, located at the bottom of the window</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	End the call succesully</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+<div>
+	&nbsp;</div>
+<div>
+	3. Be angaged in a video call</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc442647"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1916: Initiate an audio call with a Skype contact&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	&nbsp;</div>
+<div>
+	3. Click on the audio call button, located in the righ upper corner of the window</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Initiate the audio call with an existing contact successullySteps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	&nbsp;</div>
+<div>
+	3. Click on the audio call button, located in the righ upper corner of the window</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Initiate the audio call with an existing contact successully</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc442649"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1917: Disable the microphone in a call by using the &quot;Mute&quot; button&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Engage into a call with an existing Skype user</div>
+<div>
+	2. Click on the &quot;Mute&quot; button</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	User should be able to disable the microhpone</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Be angaged in a call</div>
+<div>
+	3. Have an operating microphone</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc442651"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1918: Enable the microphone in a call by using the &quot;Unmute&quot; button&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Engage into a call with an existing Skype user</div>
+<div>
+	2. Click on the &quot;Unmute&quot; button</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Re-enable the microphone successully</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Be angaged in a call</div>
+<div>
+	3. Have an operating microphone</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc442656"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1919: Verify if User can decline an incoming call&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Have another existing Skype user engaging a call</p>
+<p>
+	2. Decline the call by pressing the &quot;Decline&quot; button, located in the top right corner</p>
+<p>
+	Expected results:&nbsp;</p>
+<p>
+	User should be able to decline the call</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	&nbsp;</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc442658"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1920: Verify if User can accept, decline and hear to voice call over headphones&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Engage into a call with another Skype user</p>
+<p>
+	2. Decline the call by pressing the &quot;Decline&quot; button, located in the top right corner/or &quot;Accept&quot;</p>
+<p>
+	Expected results:&nbsp;</p>
+<p>
+	User should be able to hear the notifications and the other user through headsets</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Have a funtioning pair of headsets conected to the system</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc442660"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1921: Disable the camera in a call by using &quot;Turn video off&quot; button&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Engage into a call with an existing Skype user</div>
+<div>
+	2. Click on the &quot;Turn video off&quot; button, located at the botton of the window</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Disable the webcam successully</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	&nbsp;</div>
+<div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Be angaged in a call</div>
+<div>
+	3. Have an operating webcam</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc442662"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1922: Enable the camera in a call by using &quot;Turn video on&quot; button&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Engage into a call with an existing Skype user</div>
+<div>
+	2. Click on the &quot;Turn video off&quot; button, located at the botton of the window&nbsp;</div>
+<div>
+	3. Enable back the webcam, by pressing on &quot;Turn video on&quot; button,&nbsp;located at the botton of the window&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Re-enable the webcam successully</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc442717"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1930: Verify if User is receiving the correct image via video call, not a mirrored image&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Engage into a video call with an existing Skype user</div>
+<div>
+	2. Verify if the image that you see is not inverted or disorted in any way (mirrored)</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Receive the live images succesfully and not disorted</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Be angaged in a call</div>
+<div>
+	3. Have an operating webcam</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc443214"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1992: Performing video/audio call to a recipient whose app is in background&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<p>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</p>
+<p>
+	2. Select an existing contact</p>
+<p>
+	3. Click on the video call button, located in the righ upper corner of the window</p>
+<p>
+	Expected results:</p>
+<p>
+	Recipient should get a notification of incoming call and be able to accept/decline call succesfully</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Recipient must have Skype app in background</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.2.5.Test Suite : Connecting via Messaging</h4>
+<a name="toc_tc442664"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1923: Initiate conversation with a Skype contact by using instant messages&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	&nbsp;</div>
+<div>
+	3. Click onto the text field, located at the left-bottom corner of the window and engage into a conversation&nbsp;throgh instant messages</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Initiate the conversation with an existing contact succesully&nbsp;throgh instant messages</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc442674"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1925: Verify is User can send  multiple text message to the receiver&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	3. Click onto the text field, located at the left-bottom corner of the window and engage into a conversation&nbsp;throgh instant messages</div>
+<div>
+	4. Send multiple text messeges</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Initiate the conversation with an existing contact succesully&nbsp;throgh instant messages</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc442676"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1926: Verify if User if there is a limit to the characters that can be sent to  a receiver&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	&nbsp;</div>
+<div>
+	3. Click onto the text field, located at the left-bottom corner of the window and engage into a conversation&nbsp;throgh a long instant message&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	System should have a limit to the characters contained by text messeges</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+<div>
+	3. Limit of characters in skype is 25.000</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc442678"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1927: Verify that User cannot send a blank message to a receiver&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	3. Click onto the text field, located at the left-bottom corner of the window and engage into a conversation&nbsp;</div>
+<div>
+	4. Leave the text field empthy and press &quot;send&quot; or &quot;enter&quot; key</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	System should not let user to send the empthy messege</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc443116"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1957: Verify if message text accept emoticons in text format or image format&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	&nbsp;</div>
+<div>
+	3. Click onto the text field, located at the left-bottom corner of the window and engage into a conversation&nbsp;throgh instant messages</div>
+<div>
+	4. Click onto the smiley icon &quot;Open Expression Picker&quot;, at the left corner of the text field, and select an emoticon, and press &quot;Send&quot; or the &quot;Enter&quot; key</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	Initiate the conversation with an existing contact succesully, and send emoticons</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc443220"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1995: Verify if User can modify text while writing it in the text field&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	3. Click onto the text field, located at the left-bottom corner of the window and engage into a conversation&nbsp;throgh instant messages</div>
+<div>
+	4. Write a text messege into the text field and atempt to modify it before sending it to the reciever</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	User should be able to modify content</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+<div>
+	3. Be in a conversation with an existing Skype user</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc443224"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1997: Verify if User can edit the text after sending it to the recipient&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	3. Click onto the text field, located at the left-bottom corner of the window and engage into a conversation throgh instant messages</div>
+<div>
+	4. Right-click onto the text and select from the pop-up window &quot;Edit&quot;</div>
+<div>
+	5. Edit the sent content</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	User should be able to edit the content</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Be in a conversation with an existing Skype user</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc443226"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1998: Verify if User can copy text from the chat window&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	3. Click onto the text field, located at the left-bottom corner of the window and engage into a conversation throgh instant messages</div>
+<div>
+	4. Right-click onto the text and select &quot;copy&quot; from the pop-ul window</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	User should be able to copy the content</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc443230"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-2000: Verify if User can reply/quote to sent or received text messges&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	3. Click onto the text field, located at the left-bottom corner of the window and engage into a conversation throgh instant messages</div>
+<div>
+	4. Right-click onto the text and select from the pop-up window &quot;quote&quot;</div>
+<div>
+	5. Use the quote and write the reply text</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	User should be able to quote texts from the conversation and use them further</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+<div>
+	3. Be in a conversation with an existing Skype user</div>
+<div>
+	&nbsp;</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc443234"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-2002: Verify if User can forward certain text messeges&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	3. Click onto the text field, located at the left-bottom corner of the window and engage into a conversation throgh instant messages</div>
+<div>
+	4. Right-click onto the text and select from the pop-up window &quot;Forward&quot;</div>
+<div>
+	5. Forward the text messege selected to another contact</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	User should be able to forward the selected message to another existing user</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Be in a conversation with an existing user</div>
+<div>
+	3. Know, or have more contacts</div>
+<div>
+	&nbsp;</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc443238"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-2004: Verify if User can add certain selected text messeges to &quot;Bookmarks&quot;&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	3. Click onto the text field, located at the left-bottom corner of the window and engage into a conversation throgh instant messages</div>
+<div>
+	4. Right-click onto the selected text and choose from the pop-up window, &quot;Bookmarks&quot;</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	User should be able to save to &quot;Bookmarks&quot; selected texts</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+<div>
+	3. Be in a conversation with an existing Skype user</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc444242"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-2336: Verify that User cannot send a blank message to a receiver, even using a copy paste as content&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	2. Select a Skype contact</div>
+<div>
+	3. Click onto the text field, located at the left-bottom corner of the window and engage into a conversation&nbsp;</div>
+<div>
+	4. Insert a tab in text document, copy it and paste in the skype conversation</div>
+<div>
+	5. Attempt to press &quot;Send message&quot; button</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	System should not let user to send the empthy messege and display the &quot;Send message&quot; button</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.2.6.Test Suite : Share</h4>
+<a name="toc_tc442666"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-1924: Share file/'s with a Skype contact by using &quot;Add files&quot; button&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	3. Click onto the &quot;Add files&quot; button, located at the bottom of the window</div>
+<div>
+	4. Select a valid file and press the &quot;Send message&quot; button, located at the bottom-right corner of the window</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	File send succesfully</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+<div>
+	&nbsp;</div>
+<div>
+	3. Valid file: Up to 300 mb file size</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc443246"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-2007: Verify that User cannot send files bigger than 300 MB's&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	3. Click onto the &quot;Add files&quot; button, located at the bottom of the window</div>
+<div>
+	4. Select a valid file bigger than 300 mb and press the &quot;Send message&quot; button, located at the bottom-right corner of the window</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected should not let user sent the file, error message should be displayed</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+<div>
+	3. Valid file: Up to 300 mb file size</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc443249"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-2008: Verify that User can share screen&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	<div>
+		Steps:</div>
+	<div>
+		&nbsp;</div>
+	<div>
+		1. Engage into a call with an existing Skype user</div>
+	<div>
+		2. Click on the &quot;Share screen&quot; button, located at the bottom-right of the call-pop-up window</div>
+	<div>
+		3. Select the screen you want to share and click onto the &quot;Start sharing&quot; button</div>
+	<div>
+		&nbsp;</div>
+	<div>
+		Expected results:</div>
+	<div>
+		&nbsp;</div>
+	<div>
+		Share the screen succesfully with another user</div>
+</div>
+<p>
+	&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Be in a conversation with an existing Skype user</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc443253"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-2010: Verify that User can share her/his contact details&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:</p>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	&nbsp;</div>
+<div>
+	2. Select an existing contact</div>
+<div>
+	&nbsp;</div>
+<div>
+	3. Click onto the text field, located at the left-bottom corner of the window and engage into a conversation&nbsp;throgh instant messages</div>
+<div>
+	4. Drag and drop the person you want to share into the chat so your reciever can add them to their own contact list</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:</div>
+<div>
+	&nbsp;</div>
+<div>
+	User should be able to share contacts deltails with other users, and they should be able to add them</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<p>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc443342"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-2043: Verify if user can share computer sound&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	<div>
+		Steps:</div>
+	<div>
+		&nbsp;</div>
+	<div>
+		1. Engage into a call with an existing Skype user</div>
+	<div>
+		2. Click on the &quot;Share screen&quot; button, located at the bottom-right of the call-pop-up window</div>
+	<div>
+		3. Select &quot;Share computer sound&quot; and switch the toogle on</div>
+	<div>
+		&nbsp;</div>
+	<div>
+		Expected results:</div>
+	<div>
+		&nbsp;</div>
+	<div>
+		Share computer sound succesfully with another user</div>
+</div>
+<p>
+	&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Be in a conversation with an existing Skype user</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc444268"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-2345: Share file/'s with a Skype contact by drag &amp; drop into the chat field&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><div>
+	Steps:</div>
+<div>
+	&nbsp;</div>
+<div>
+	1. Click on &quot;Contacts&quot; button, located in the right upper part of the sidebar</div>
+<div>
+	2. Select an existing contact&nbsp;</div>
+<div>
+	3. Click onto the text field, located at the left-bottom corner of the window and engage into a conversation&nbsp;throgh instant messages</div>
+<div>
+	4. Share a valid file with by using drag &amp; drop technique</div>
+<div>
+	&nbsp;</div>
+<div>
+	Expected results:&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	User should be able to share file/&#39;s</div>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	1. Have Skype for Desktop installed and running</div>
+<div>
+	2. Have an existing Skype user in the &quot;Contacts&quot; list</div>
+<div>
+	3. Valid file: Up to 300 mb file size</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name='toc_'></a>
+<h4 class='doclevel'>1.1.2.7.Test Suite : Sidebar</h4>
+<a name="toc_tc443995"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-2265: Verify that Skype displays in real-time the availability of contacts&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:&nbsp;</p>
+<p>
+	1. Have your Skype contact/&#39;s to change their availability status&nbsp;</p>
+<p>
+	2. Check if the status contact changed in real time, or whatsoever</p>
+<p>
+	Expected results:&nbsp;</p>
+<p>
+	System should change the availability status in real-time</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>
+	1. Have Skype for Desktop installed and running</p>
+<p>
+	2. Have one, or more skype contacts</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc444020"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-2276: Verify if User can enable split view mode&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:&nbsp;</p>
+<p>
+	1. Go the the [more] option menu, in the top right corner of the sidebar</p>
+<p>
+	2. Select &quot;Enable split view menu&quot;</p>
+<p>
+	Expected results:&nbsp;</p>
+<p>
+	User should be able to enable the split view&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	&nbsp;</div>
+<div>
+	1. Have Skype for Desktop installed and running</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc444024"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-2278: Verify if User can disable the split view menu&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:&nbsp;</p>
+<p>
+	1. Go the the [more] option menu, in the top right corner of the sidebar</p>
+<p>
+	2. Select &quot;Disable split view mode&quot;</p>
+<p>
+	Expected results:&nbsp;</p>
+<p>
+	User should be able to disable the the split view&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	&nbsp;</div>
+<div>
+	1. Have Skype for Desktop installed and running</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+<a name="toc_tc444032"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case NT-QA-04-2282: Verify is User can sign out from the &quot;more&quot; option menu&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">dan.croitoru</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>
+	Steps:&nbsp;</p>
+<p>
+	1. Go the the [more] option menu, in the top right corner of the sidebar</p>
+<p>
+	2. Select &quot;Sign out&quot; and choose if you want to save account/ or not</p>
+<p>
+	Expected results:&nbsp;</p>
+<p>
+	Sign out succesfully&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><div>
+	&nbsp;</div>
+<div>
+	1. Have Skype for Desktop installed and running</div>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span><td colspan="3">&nbsp;None<br></td></tr>
+</table>
+</div>
+
+</body>
+</html>
